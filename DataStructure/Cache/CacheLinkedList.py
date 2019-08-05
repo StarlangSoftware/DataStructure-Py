@@ -1,4 +1,4 @@
-import Cache.CacheNode
+from DataStructure.Cache import CacheNode
 
 class CacheLinkedList(object):
 
@@ -18,7 +18,7 @@ class CacheLinkedList(object):
     cacheNode : CacheNode
         CacheNode type input to remove.
     """
-    def removeGiven(self, cacheNode: Cache.CacheNode):
+    def removeGiven(self, cacheNode: CacheNode):
         previous = cacheNode.getPrevious()
         next = cacheNode.getNext()
         if previous is not None:
@@ -40,7 +40,7 @@ class CacheLinkedList(object):
     cacheNode : CacheNode
         CacheNode type input to add to the doubly list.
     """
-    def add(self, cacheNode: Cache.CacheNode):
+    def add(self, cacheNode: CacheNode):
         cacheNode.setPrevious(None)
         cacheNode.setNext(self.head)
         if self.head is not None:
@@ -58,7 +58,7 @@ class CacheLinkedList(object):
     CacheNode
         CacheNode type output tail which is removed from doubly list.
     """
-    def remove(self) -> Cache.CacheNode:
+    def remove(self) -> CacheNode:
         removed = self.tail
         self.tail = self.tail.getPrevious
         if self.tail is None:
