@@ -1,4 +1,4 @@
-from DataStructure.Cache import CacheNode
+from DataStructure.Cache.CacheNode import CacheNode
 
 class CacheLinkedList(object):
 

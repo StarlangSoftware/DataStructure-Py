@@ -1,4 +1,5 @@
-from DataStructure.Cache import CacheLinkedList, CacheNode
+from DataStructure.Cache.CacheNode import CacheNode
+from DataStructure.Cache.CacheLinkedList import CacheLinkedList
 
 
 class LRUCache(object):
@@ -14,7 +15,7 @@ class LRUCache(object):
     """
     def __init__(self, cacheSize : int):
         self.cacheSize = cacheSize
-        self.cache = CacheLinkedList.CacheLinkedList()
+        self.cache = CacheLinkedList()
         self.map = {}
 
     """
@@ -75,6 +76,6 @@ class LRUCache(object):
         if len(self.map) == self.cacheSize:
             removed = self.cache.remove()
             self.map.pop(removed.getKey())
-        cacheNode = CacheNode.CacheNode(key, data)
+        cacheNode = CacheNode(key, data)
         self.cache.add(cacheNode)
         self.map[key] = cacheNode
