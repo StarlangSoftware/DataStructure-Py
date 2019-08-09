@@ -331,3 +331,8 @@ lib/python3.7/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/webencodings/labels
 lib/python3.7/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/webencodings/mklabels.py
 lib/python3.7/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/webencodings/tests.py
 lib/python3.7/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/webencodings/x_user_defined.py
+dist/NlpToolkit-DataStructure-1.0.0.tar.gz
+NlpToolkit_DataStructure.egg-info/dependency_links.txt
+NlpToolkit_DataStructure.egg-info/PKG-INFO
+NlpToolkit_DataStructure.egg-info/SOURCES.txt
+NlpToolkit_DataStructure.egg-info/top_level.txt
