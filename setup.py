@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='NlpToolkit-DataStructure',
-    version='1.0.0',
+    version='1.0.1',
     packages=['DataStructure', 'DataStructure.Cache'],
     url='https://github.com/olcaytaner/DataStructure-Py',
     license='',
