@@ -3,6 +3,11 @@ from __future__ import annotations
 
 class CacheNode(object):
 
+    _key : object
+    _data : object
+    _previous : CacheNode
+    _next : CacheNode
+
     """
     A constructor of CacheNode class which takes a key and a data as inputs and initializes private fields with
     these inputs.
@@ -15,10 +20,10 @@ class CacheNode(object):
         T type input values represented by keys.
     """
     def __init__(self, key: object, data: object):
-        self.key = key
-        self.data = data
-        self.previous = None
-        self.next = None
+        self._key = key
+        self._data = data
+        self._previous = None
+        self._next = None
 
     """
     Getter for data value.
@@ -29,7 +34,7 @@ class CacheNode(object):
         data value.
     """
     def getData(self) -> object:
-        return self.data
+        return self._data
 
     """
     Getter for key value.
@@ -40,7 +45,7 @@ class CacheNode(object):
         key value.
     """
     def getKey(self) -> object:
-        return self.key
+        return self._key
 
     """
     Getter for the previous CacheNode.
@@ -51,7 +56,7 @@ class CacheNode(object):
         previous CacheNode.
     """
     def getPrevious(self) -> CacheNode:
-        return self.previous
+        return self._previous
 
     """
     Getter for the next CacheNode.
@@ -62,7 +67,7 @@ class CacheNode(object):
         next CacheNode.
     """
     def getNext(self) -> CacheNode:
-        return self.next
+        return self._next
 
     """
     Setter for the previous CacheNode.
@@ -73,7 +78,7 @@ class CacheNode(object):
         previous CacheNode.
     """
     def setPrevious(self, previous: CacheNode):
-        self.previous = previous
+        self._previous = previous
 
     """
     Setter for the next CacheNode.
@@ -84,4 +89,4 @@ class CacheNode(object):
         next CacheNode.
     """
     def setNext(self, next: CacheNode):
-        self.next = next
+        self._next = next

@@ -2,9 +2,12 @@ from DataStructure.Cache.CacheNode import CacheNode
 
 class CacheLinkedList(object):
 
+    _head : CacheNode
+    _tail : CacheNode
+
     def __init__(self):
-        self.head = None
-        self.tail = None
+        self._head = None
+        self._tail = None
 
     """
     The removeGiven method takes a CacheNode type input cacheNode. If cacheNode has a previous node, then assigns 
@@ -24,11 +27,11 @@ class CacheLinkedList(object):
         if previous is not None:
             previous.setNext(next)
         else:
-            self.head = self.head.getNext()
+            self._head = self._head.getNext()
         if next is not None:
             next.setPrevious(previous)
         else:
-            self.tail = self.tail.getPrevious()
+            self._tail = self._tail.getPrevious()
 
     """
     The add method adds given CacheNode type input cacheNode to the beginning of the doubly list.
@@ -42,12 +45,12 @@ class CacheLinkedList(object):
     """
     def add(self, cacheNode: CacheNode):
         cacheNode.setPrevious(None)
-        cacheNode.setNext(self.head)
-        if self.head is not None:
-            self.head.setPrevious(cacheNode)
-        self.head = cacheNode
-        if self.tail is None:
-            self.tail = cacheNode
+        cacheNode.setNext(self._head)
+        if self._head is not None:
+            self._head.setPrevious(cacheNode)
+        self._head = cacheNode
+        if self._tail is None:
+            self._tail = cacheNode
 
     """
     The remove method removes the last element of the doubly list. It assigns the previous node of
@@ -59,8 +62,8 @@ class CacheLinkedList(object):
         CacheNode type output tail which is removed from doubly list.
     """
     def remove(self) -> CacheNode:
-        removed = self.tail
-        self.tail = self.tail.getPrevious
-        if self.tail is None:
-            self.head = None
+        removed = self._tail
+        self._tail = self._tail.getPrevious()
+        if self._tail is None:
+            self._head = None
         return removed
