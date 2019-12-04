@@ -4,9 +4,9 @@ from DataStructure.Cache.CacheLinkedList import CacheLinkedList
 
 class LRUCache(object):
 
-    _cacheSize : int
-    _map : dict
-    _cache : CacheLinkedList
+    __cacheSize : int
+    __map : dict
+    __cache : CacheLinkedList
 
     """
     A constructor of LRUCache class which takes cacheSize as input. It creates new CacheLinkedList and
@@ -18,9 +18,9 @@ class LRUCache(object):
         Integer input defining cache size.
     """
     def __init__(self, cacheSize : int):
-        self._cacheSize = cacheSize
-        self._cache = CacheLinkedList()
-        self._map = {}
+        self.__cacheSize = cacheSize
+        self.__cache = CacheLinkedList()
+        self.__map = {}
 
     """
     The contains method takes a object type input key and returns true if the dictionary has the given key, false 
@@ -36,7 +36,7 @@ class LRUCache(object):
         true if the HashMap has the given key, false otherwise.
     """
     def contains(self, key: object) -> bool:
-        return key in self._map
+        return key in self.__map
 
     """
     The get method takes object type input key and returns the least recently used value. First it checks whether the 
@@ -55,10 +55,10 @@ class LRUCache(object):
         data value if the dictionary has the given key, None otherwise.
     """
     def get(self, key: object) -> object:
-        if key in self._map:
+        if key in self.__map:
             cacheNode = self.get(key)
-            self._cache.removeGiven(cacheNode)
-            self._cache.add(cacheNode)
+            self.__cache.removeGiven(cacheNode)
+            self.__cache.add(cacheNode)
             return cacheNode.getData()
         else:
             return None
@@ -77,9 +77,9 @@ class LRUCache(object):
         object type input
     """
     def add(self, key: object, data: object):
-        if len(self._map) == self._cacheSize:
-            removed = self._cache.remove()
-            self._map.pop(removed.getKey())
+        if len(self.__map) == self.__cacheSize:
+            removed = self.__cache.remove()
+            self.__map.pop(removed.getKey())
         cacheNode = CacheNode(key, data)
-        self._cache.add(cacheNode)
-        self._map[key] = cacheNode
+        self.__cache.add(cacheNode)
+        self.__map[key] = cacheNode

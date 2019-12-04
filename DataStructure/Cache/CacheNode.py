@@ -3,10 +3,10 @@ from __future__ import annotations
 
 class CacheNode(object):
 
-    _key : object
-    _data : object
-    _previous : CacheNode
-    _next : CacheNode
+    __key : object
+    __data : object
+    __previous : CacheNode
+    __next : CacheNode
 
     """
     A constructor of CacheNode class which takes a key and a data as inputs and initializes private fields with
@@ -20,10 +20,10 @@ class CacheNode(object):
         T type input values represented by keys.
     """
     def __init__(self, key: object, data: object):
-        self._key = key
-        self._data = data
-        self._previous = None
-        self._next = None
+        self.__key = key
+        self.__data = data
+        self.__previous = None
+        self.__next = None
 
     """
     Getter for data value.
@@ -34,7 +34,7 @@ class CacheNode(object):
         data value.
     """
     def getData(self) -> object:
-        return self._data
+        return self.__data
 
     """
     Getter for key value.
@@ -45,7 +45,7 @@ class CacheNode(object):
         key value.
     """
     def getKey(self) -> object:
-        return self._key
+        return self.__key
 
     """
     Getter for the previous CacheNode.
@@ -56,7 +56,7 @@ class CacheNode(object):
         previous CacheNode.
     """
     def getPrevious(self) -> CacheNode:
-        return self._previous
+        return self.__previous
 
     """
     Getter for the next CacheNode.
@@ -67,7 +67,7 @@ class CacheNode(object):
         next CacheNode.
     """
     def getNext(self) -> CacheNode:
-        return self._next
+        return self.__next
 
     """
     Setter for the previous CacheNode.
@@ -78,7 +78,7 @@ class CacheNode(object):
         previous CacheNode.
     """
     def setPrevious(self, previous: CacheNode):
-        self._previous = previous
+        self.__previous = previous
 
     """
     Setter for the next CacheNode.
@@ -89,4 +89,4 @@ class CacheNode(object):
         next CacheNode.
     """
     def setNext(self, next: CacheNode):
-        self._next = next
+        self.__next = next
