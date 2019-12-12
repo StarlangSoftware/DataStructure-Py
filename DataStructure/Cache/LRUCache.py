@@ -56,7 +56,7 @@ class LRUCache(object):
     """
     def get(self, key: object) -> object:
         if key in self.__map:
-            cacheNode = self.get(key)
+            cacheNode = self.__map[key]
             self.__cache.removeGiven(cacheNode)
             self.__cache.add(cacheNode)
             return cacheNode.getData()
