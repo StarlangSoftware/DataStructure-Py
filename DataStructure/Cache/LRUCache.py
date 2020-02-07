@@ -17,7 +17,7 @@ class LRUCache(object):
     cacheSize : int
         Integer input defining cache size.
     """
-    def __init__(self, cacheSize : int):
+    def __init__(self, cacheSize: int):
         self.__cacheSize = cacheSize
         self.__cache = CacheLinkedList()
         self.__map = {}

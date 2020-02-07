@@ -153,7 +153,7 @@ class CounterHashMap(dict):
     list
         a sublist of N element.
     """
-    def topN(self, N : int) -> list:
+    def topN(self, N: int) -> list:
         result = []
         for key in self:
             result.append([self[key], key])
