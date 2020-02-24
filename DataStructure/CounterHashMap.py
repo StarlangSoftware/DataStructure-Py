@@ -9,6 +9,21 @@ class CounterHashMap(dict):
         """
         super().__init__(kwargs)
 
+    def __str__(self) -> str:
+        """
+        The __str__ method loops through the mappings contained in this map and returns the string of each entry's key and
+        value.
+
+        RETURNS
+        -------
+        str
+            String of the each entry's key and value.
+        """
+        result = ""
+        for key in self.keys():
+            result += key + " " + self[key].__str__() + "\n"
+        return result
+
     def put(self, key: object):
         """
         The put method takes a object type input. If this map contains a mapping for the key, it puts this key after
