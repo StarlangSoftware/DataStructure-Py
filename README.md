@@ -59,11 +59,11 @@ CounterHashMap bir veri tipinin kaç kere geçtiğini hafızada tutmak için kul
 
 Bir CounterHashMap yaratmak için
 
-	a = CounterHashMap();
+	a = CounterHashMap()
 
 Hafızaya veri eklemek için
 
-	void put(K key)
+	put(self, key: object)
 
 Örneğin,
 
@@ -73,7 +73,7 @@ Bu aşamanın ardından "ali" nin sayacı 1 olur.
 
 Hafızaya o veriyi birden fazla kez eklemek için
 
-	void putNTimes(K key, int N)
+	putNTimes(self, key: object, N: int)
 
 Örneğin,
 
@@ -83,7 +83,7 @@ Bu aşamanın ardından "ali"'nin sayacı 5 olur.
 
 Hafızada o verinin kaç kere geçtiğini bulmak için
 
-	int count(K key)
+	count(self, key: object) -> int
 
 Örneğin, "veli" nin kaç kere geçtiğini bulmak için
 
@@ -93,7 +93,7 @@ Bu aşamanın ardından kacKere değişkeninin değeri 5 olur.
 
 Hafızada hangi verinin en çok geçtiğini bulmak için
 
-	K max()
+	max(self) -> object
 
 Örneğin,
 
@@ -106,25 +106,25 @@ Bu aşamanın ardından kelime "veli" olur.
 LRUCache veri cachelemek için kullanılan bir veri yapısıdır. LRUCache en yakın zamanda 
 kullanılan verileri öncelikli olarak hafızada tutar. Bir LRUCache yaratmak için
 
-	LRUCache(int cacheSize)
+	LRUCache(self, cacheSize: int)
 
 kullanılır. cacheSize burada cachelenecek verinin büyüklüğünün limitini göstermektedir.
 
 Cache'e bir veri eklemek için
 
-	void add(K key, T data)
+	add(self, key: object, data: object)
 
 kullanılır. data burada eklenecek veriyi, key anahtar göstergeyi göstermektedir.
 
 Cache'de bir veri var mı diye kontrol etmek için
 
-	boolean contains(K key)
+	contains(self, key: object) -> bool
 
 kullanılır.
 
 Cache'deki veriyi anahtarına göre getirmek için
 
-	T get(K key)
+	get(self, key: object) -> object
 
 kullanılır.
 
