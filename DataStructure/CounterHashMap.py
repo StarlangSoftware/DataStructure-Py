@@ -11,8 +11,8 @@ class CounterHashMap(dict):
 
     def __str__(self) -> str:
         """
-        The __str__ method loops through the mappings contained in this map and returns the string of each entry's key and
-        value.
+        The __str__ method loops through the mappings contained in this map and returns the string of each entry's key
+        and value.
 
         RETURNS
         -------
@@ -92,28 +92,9 @@ class CounterHashMap(dict):
             total += self[key]
         return total
 
-    def max(self) -> object:
+    def max(self, threshold: float = 0.0) -> object:
         """
-        The max method loops through the mappings contained in this map and if the current entry's count value is
-        greater than maxCount, which is initialized as 0, it updates the maxCount as current count and maxKey as the
-        current count's key.
-
-        RETURNS
-        -------
-        object
-            object type maxKey which is the maximum valued key.
-        """
-        maxCount = 0
-        maxKey = None
-        for key in self:
-            if self[key] > maxCount:
-                maxCount = self[key]
-                maxKey = key
-        return maxKey
-
-    def maxOverThreshold(self, threshold: float) -> object:
-        """
-        The maxOverThreshold method takes a threshold as input and loops through the mappings contained in this map.
+        The max method takes a threshold as input and loops through the mappings contained in this map.
         It accumulates the count values and if the current entry's count value is greater than maxCount, which is
         initialized as 0, it updates the maxCount as current count and maxKey as the current count's key.
         At the end of the loop, if the ratio of maxCount/total is greater than the given threshold it returns maxKey,
