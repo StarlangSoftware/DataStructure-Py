@@ -1,8 +1,9 @@
 # DataStructure
+
 For Developers
 ============
-You can also see either [C++](https://github.com/olcaytaner/DataStructure-CPP) 
-or [Java](https://github.com/olcaytaner/DataStructure) repository.
+You can also see [Java](https://github.com/olcaytaner/DataStructure), [C++](https://github.com/olcaytaner/DataStructure-CPP), or [C#](https://github.com/olcaytaner/DataStructure-CS) repository.
+
 ## Requirements
 
 * [Python 3.7 or higher](#python)
