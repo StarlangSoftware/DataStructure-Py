@@ -341,3 +341,6 @@ dist/NlpToolkit-DataStructure-1.0.3.tar.gz
 /dist/
 DataStructure/__pycache__/__init__.cpython-37.pyc
 DataStructure/__pycache__/CounterHashMap.cpython-37.pyc
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
