@@ -1,4 +1,5 @@
 import unittest
+import time
 from random import randrange
 
 from DataStructure.Cache.LRUCache import LRUCache
@@ -39,6 +40,16 @@ class LRUCacheTest(unittest.TestCase):
                 count = count + 1
         self.assertAlmostEqual(0.632, count / 1000000.0, 3)
 
+    def test_5(self):
+        cache = LRUCache(1000000)
+        for i in range(1000000):
+            cache.add(i, i)
+        for j in range(1000):
+            time1 = int(round(time.time() * 1000))
+            for i in range(100000):
+                data = randrange(1000000, 2000000)
+                cache.add(data, data)
+            print(int(round(time.time() * 1000)) - time1)
 
 if __name__ == '__main__':
     unittest.main()
