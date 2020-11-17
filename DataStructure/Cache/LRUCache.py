@@ -1,12 +1,10 @@
-from DataStructure.Cache.CacheNode import CacheNode
-from DataStructure.Cache.CacheLinkedList import CacheLinkedList
+import collections
 
 
 class LRUCache(object):
 
     __cacheSize: int
-    __map: dict
-    __cache: CacheLinkedList
+    __map: collections.OrderedDict
 
     def __init__(self, cacheSize: int):
         """
@@ -19,8 +17,7 @@ class LRUCache(object):
             Integer input defining cache size.
         """
         self.__cacheSize = cacheSize
-        self.__cache = CacheLinkedList()
-        self.__map = {}
+        self.__map = collections.OrderedDict()
 
     def contains(self, key: object) -> bool:
         """
@@ -56,10 +53,10 @@ class LRUCache(object):
             data value if the dictionary has the given key, None otherwise.
         """
         if key in self.__map:
-            cacheNode = self.__map[key]
-            self.__cache.removeGiven(cacheNode)
-            self.__cache.add(cacheNode)
-            return cacheNode.getData()
+            value = self.__map[key]
+            self.__map.pop(key)
+            self.__map[key] = value
+            return value
         else:
             return None
 
@@ -78,8 +75,5 @@ class LRUCache(object):
             object type input
         """
         if len(self.__map) == self.__cacheSize:
-            removed = self.__cache.remove()
-            self.__map.pop(removed.getKey())
-        cacheNode = CacheNode(key, data)
-        self.__cache.add(cacheNode)
-        self.__map[key] = cacheNode
+            self.__map.popitem(last=False)
+        self.__map[key] = data
