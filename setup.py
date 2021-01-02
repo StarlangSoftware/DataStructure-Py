@@ -4,9 +4,9 @@ setup(
     name='NlpToolkit-DataStructure',
     version='1.0.9',
     packages=['DataStructure', 'DataStructure.Cache'],
-    url='https://github.com/olcaytaner/DataStructure-Py',
+    url='https://github.com/StarlangSoftware/DataStructure-Py',
     license='',
     author='olcaytaner',
-    author_email='olcaytaner@isikun.edu.tr',
+    author_email='olcay.yildiz@ozyegin.edu.tr',
     description='Simple Data Structures Library'
 )
