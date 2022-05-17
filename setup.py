@@ -2,11 +2,11 @@ from setuptools import setup
 
 from pathlib import Path
 this_directory = Path(__file__).parent
-long_description = (this_directory / "README.md").read_text()
+long_description = (this_directory / "README.md").read_text(encoding="utf-8")
 
 setup(
     name='NlpToolkit-DataStructure',
-    version='1.0.10',
+    version='1.0.11',
     packages=['DataStructure', 'DataStructure.Cache'],
     url='https://github.com/StarlangSoftware/DataStructure-Py',
     license='',
