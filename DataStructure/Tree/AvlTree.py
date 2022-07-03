@@ -10,7 +10,7 @@ class AvlTree(Tree):
     def __init__(self, comparator: Callable[[object, object], int]):
         super().__init__(comparator)
 
-    def height(self, d: AvlTreeNode):
+    def height(self, d: AvlTreeNode) -> int:
         if d is None:
             return 0
         else:
