@@ -25,7 +25,7 @@ class BTreeNode:
             self.children.append(secondChild)
             self.K.append(newK)
 
-    def position(self, value: object, comparator: Callable[[object, object], int]):
+    def position(self, value: object, comparator: Callable[[object, object], int]) -> int:
         if self.m == 0:
             return 0
         if comparator(value, self.K[self.m - 1]) > 0:
