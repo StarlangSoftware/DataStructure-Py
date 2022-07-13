@@ -29,7 +29,7 @@ class BTreeNode:
         if self.m == 0:
             return 0
         if comparator(value, self.K[self.m - 1]) > 0:
-            return  self.m
+            return self.m
         else:
             for i in range(self.m):
                 if comparator(value, self.K[i]) <= 0:
