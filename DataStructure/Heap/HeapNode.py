@@ -7,3 +7,6 @@ class HeapNode:
 
     def getData(self) -> object:
         return self.__data
+
+    def __repr__(self):
+        return f"{self.__data}"

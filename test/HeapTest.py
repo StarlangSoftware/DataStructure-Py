@@ -32,5 +32,6 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(2, min_heap.delete())
         self.assertEqual(3, min_heap.delete())
 
+
 if __name__ == '__main__':
     unittest.main()

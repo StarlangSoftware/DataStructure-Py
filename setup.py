@@ -6,7 +6,7 @@ long_description = (this_directory / "README.md").read_text(encoding="utf-8")
 
 setup(
     name='NlpToolkit-DataStructure',
-    version='1.0.13',
+    version='1.0.14',
     packages=['DataStructure', 'DataStructure.Cache', 'DataStructure.Tree', 'DataStructure.Heap'],
     url='https://github.com/StarlangSoftware/DataStructure-Py',
     license='',
