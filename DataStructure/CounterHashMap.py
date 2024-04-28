@@ -17,7 +17,7 @@ class CounterHashMap(dict):
         RETURNS
         -------
         str
-            String of the each entry's key and value.
+            String of each entry's key and value.
         """
         result = ""
         for key in self.keys():
