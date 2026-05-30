@@ -10,7 +10,7 @@ You can also see [Cython](https://github.com/starlangsoftware/DataStructure-Cy),
 
 ## Requirements
 
-* [Python 3.7 or higher](#python)
+* [Python 3.13 or higher](#python)
 * [Git](#git)
 
 ### Python 
@@ -27,7 +27,7 @@ Install the [latest version of Git](https://git-scm.com/book/en/v2/Getting-Start
 
 ## Pip Install
 
-	pip3 install NlpToolkit-DataStructure
+	pip3.13 install NlpToolkit-DataStructure
 
 ## Download Code
 
